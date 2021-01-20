@@ -1,0 +1,264 @@
+@import "mixins";
+@import "fonts";
+@import "footer";
+@import "header";
+@import "forms";
+/* Обнуляющий стиль */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+ol li,
+ul li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	outline: none;
+}
+html,
+body {
+	font-size: 14px;
+	line-height: 1;
+	font-family: "Poppins";
+	color: #5a5a5a;
+}
+/* -------------- */
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+}
+
+//=================================================================================================================
+// ._container
+._container {
+	max-width: 1130px;
+	margin: 0 auto;
+	padding: 0px 10px;
+}
+//==================================================================================================================
+.about {
+	background: #f8f8f8;
+	padding: 210px 0px 170px 0px;
+	color: #000;
+	// .about__container
+	&__container {
+	}
+	// .about__body
+	&__body {
+	}
+	// .about__title
+	&__title {
+		font-size: 40px;
+		line-height: 60px;
+		font-weight: 900;
+	}
+	// .about__text
+	&__text {
+		font-size: 40px;
+		line-height: 60px;
+	}
+	// .about__btn
+	&__btn {
+		margin: 40px 0px 0px 0px;
+		padding: 0px 43px;
+		min-height: 50px;
+	}
+}
+
+//==================================================================================================================
+.info {
+	background: #e5e5e5;
+	padding: 68px 0px 83px 0px;
+	// .info__container
+	&__container {
+	}
+	// .info__row
+	&__row {
+		display: flex;
+		margin: 0px -15px;
+	}
+	// .info__column
+	&__column {
+		flex: 0 1 50%;
+		padding: 0px 15px;
+	}
+}
+
+.column-info {
+	// .column-info__image
+	&__image {
+	}
+	// .column-info__text
+	&__text {
+		font-size: 16px;
+		line-height: 24px;
+		color: #5a5a5a;
+		span {
+			font-weight: 500;
+			font-style: italic;
+			display: inline-block;
+			margin: 20px 0px;
+			border-left: 5px solid #70c851;
+			padding: 0px 0px 0px 24px;
+		}
+	}
+}
+//==================================================================================================================
+.why {
+	padding: 60px 0px 120px 0px;
+
+	// .why__container
+	&__container {
+	}
+	// .why__title
+	&__title {
+		text-align: center;
+		margin: 0px 0px 80px 0px;
+	}
+	// .why__body
+	&__body {
+		display: flex;
+		align-items: center;
+		margin: 0px -15px;
+		margin-bottom: 130px;
+	}
+	// .why__item
+	&__item {
+		flex: 0 1 50%;
+		padding: 0px 15px;
+	}
+}
+
+.item-why {
+	// .item-why__body
+	&__body {
+	}
+	// .item-why__title
+	&__title {
+		margin: 0px 0px 30px 0px;
+	}
+	// .item-why__text
+	&__text {
+		font-size: 16px;
+		line-height: 20px;
+		text-align: left;
+		color: #5a5a5a;
+	}
+	// .item-why__image
+	&__image {
+		max-width: 540px;
+		img {
+			width: 100%;
+		}
+	}
+}
+.title {
+	font-weight: 600;
+	font-size: 28px;
+	line-height: 42px;
+	color: #000;
+}
+.why-reverse {
+	flex-direction: row-reverse;
+}
+//====================================================================================
+.get {
+	// .get__container
+	&__container {
+	}
+	// .get__row
+	&__row {
+		display: flex;
+	}
+	// .get__body
+	&__body {
+	}
+	// .get__image
+	&__image {
+	}
+}
+
+.body-get {
+	flex: 0 1 55%;
+	padding: 0px 10px 0px 0px;
+	// .body-get__title
+	&__title {
+		margin: 0px 0px 15px 0px;
+	}
+	// .body-get__text
+	&__text {
+		font-size: 16px;
+		line-height: 24px;
+		color: #5a5a5a;
+		margin: 0px 0px 50px 0px;
+	}
+	// .body-get__contacts
+	&__contacts {
+	}
+}
+.contacts {
+	display: flex;
+	flex-direction: column;
+	max-width: 335px;
+	a {
+		color: #000;
+		font-size: 16px;
+		padding-left: 78px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	// .contacts__adress
+	&__adress {
+		margin: 0px 0px 25px 0px;
+		background: url(../img/icons/room.svg) no-repeat;
+		line-height: 24px;
+		min-height: 60px;
+	}
+	// .contacts__tel
+	&__tel {
+		margin: 0px 0px 25px 0px;
+		background: url(../img/icons/call.svg) no-repeat;
+		font-weight: 500;
+		line-height: 60px;
+	}
+	// .contacts__email
+	&__email {
+		background: url(../img/icons/email.svg) no-repeat;
+		line-height: 60px;
+	}
+}
